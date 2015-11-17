@@ -1,6 +1,6 @@
-lunarExpress
+LeifsParty
 ============
-Is a game based on the Atari Lunar lander written in javascript(canvas)
+game bro javascript(canvas)
 
 ###To start:###
 
