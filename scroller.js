@@ -22,21 +22,8 @@ entityManager.setPlayer({
     cx : 0,
     cy : 0,
     sprite: g_sprites.player1,
-    
-    GO_UP   : KEY_W,
-    GO_DOWN : KEY_S,
-    GO_LEFT   : KEY_A,
-    GO_RIGHT : KEY_D,
-    USE : KEY_SPACE
 });
 
-
-entityManager.addEnemy({cx:-150, cy:0});
-entityManager.addEnemy({cx:-800, cy:-250});
-entityManager.addItem({cx:-800, cy:-350});
-entityManager.addEnemy({cx:150, cy:-840, isFlying: true, sprite: g_sprites.enemy2});
-
-setLevel(1);
 }
 // =============
 // GATHER INPUTS
@@ -84,7 +71,6 @@ function updateSimulation(du)
 
 function renderSimulation(ctx) {
 
-    heightmap.render(ctx,1);
     entityManager.render(ctx);
 
 }
