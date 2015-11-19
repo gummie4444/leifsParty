@@ -18,6 +18,13 @@ var g_main = {
 
 };
 
+// Annoying shim for cross-browser compat
+window.requestAnimationFrame = 
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
+
 // Perform one iteration of the mainloop
 g_main.iter = function (frameTime) {
     
@@ -70,13 +77,6 @@ var KEY_QUIT = 'Q'.charCodeAt(0);
 function requestedQuit() {
     return g_keys[KEY_QUIT];
 }
-
-// Annoying shim for cross-browser compat
-window.requestAnimationFrame = 
-  window.requestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.msRequestAnimationFrame;
 
 // This needs to be a "global" function, for the "window" APIs to callback to
 function mainIterFrame(frameTime) {
