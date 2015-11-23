@@ -30,8 +30,7 @@ entityManager.render = function(ctx)
 	this.player.render(ctx,this.viewX-g_canvas.width/2,this.viewY-g_canvas.height/2);
 };
 
-entityManager.getEnemies = function()
-{return this.enemies;}
+
 
 entityManager.clear = function()
 {

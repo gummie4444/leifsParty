@@ -1,7 +1,7 @@
 function handleMouseWheel(e)
 {
 	var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-	entityManager.player.updateSlot(delta);
+	
 }
 
 function handleMouse(evt) {
@@ -11,8 +11,6 @@ function handleMouse(evt) {
 
     // If no button is being pressed, then bail
     if (!evt.which) return;
-
-	entityManager.player.shoot(g_mouseX-g_canvas.width/2+entityManager.viewX,g_mouseY-g_canvas.height/2+entityManager.viewY);
 
     console.log("-------------------------");
     console.log("Without Offset:")

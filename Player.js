@@ -5,7 +5,9 @@ function Player(descr) {
     console.log("made player");
 }
 
-
+Player.prototype.halfWidth = 12;
+Player.prototype.halfHeight = 12;
+Player.prototype.speed = 4;
 
 Player.prototype.update = function (du) {
     
