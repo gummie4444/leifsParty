@@ -1,6 +1,8 @@
 //Instructions
-//Go to constants.js and turn mapEditorMode = true, or do so through the terminal, mapEditorMode is a global variable
+//turn mapEditorMode = true either here or do so through the terminal(preferable through terminal), mapEditorMode is a global variable
 //Click to add a new mapnode, the path from the current node to the start node is red(this might change when branching will be fully implemented)
+
+var mapEditorMode = false;
 
 var map = {
 	currents: [],
