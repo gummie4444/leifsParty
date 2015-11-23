@@ -17,6 +17,9 @@ function handleMouse(evt) {
     console.log("x: "+g_mouseX+", y: "+g_mouseY);
     console.log("With Offset:")
     console.log("x: "+(g_mouseX-g_canvas.width/2+entityManager.viewX)+", y: " + (g_mouseY-g_canvas.height/2+entityManager.viewY));
+
+    if(mapEditorMode)
+    map.addNode(0,"normal",g_mouseX-g_canvas.width/2+entityManager.viewX,g_mouseY-g_canvas.height/2+entityManager.viewY)
 }
 
 // Handle "down" and "move" events the same way.

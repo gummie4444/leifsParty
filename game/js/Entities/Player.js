@@ -10,9 +10,16 @@ Player.prototype.halfHeight = 12;
 Player.prototype.speed = 4;
 
 Player.prototype.update = function (du) {
-    
+    if(mapEditorMode)
+    	{this.freeMove(du);}
 };
 
+Player.prototype.freeMove = function(du){
+	if(g_keys[this.UP]){this.cy-=4*du;}
+	if(g_keys[this.DOWN]){this.cy+=4*du;}
+	if(g_keys[this.LEFT]){this.cx-=4*du;}
+	if(g_keys[this.RIGHT]){this.cx+=4*du;}
+}
 
 Player.prototype.render = function (ctx,offsetX,offsetY) {
 	var rx = Math.floor(this.cx - offsetX);

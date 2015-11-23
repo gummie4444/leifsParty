@@ -26,8 +26,11 @@ entityManager.update = function(du)
 
 entityManager.render = function(ctx) 
 {
-	particleManager.render(ctx,this.viewX-g_canvas.width/2,this.viewY-g_canvas.height/2);
-	this.player.render(ctx,this.viewX-g_canvas.width/2,this.viewY-g_canvas.height/2);
+	var offsetX = this.viewX-g_canvas.width/2;
+	var offsetY = this.viewY-g_canvas.height/2;
+	map.render(ctx,offsetX,offsetY);
+	particleManager.render(ctx,offsetX,offsetY);
+	this.player.render(ctx,offsetX,offsetY);
 };
 
 

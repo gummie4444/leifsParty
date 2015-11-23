@@ -21,6 +21,10 @@ entityManager.clear();
 entityManager.setPlayer({
     cx : 0,
     cy : 0,
+    UP : KEY_W,
+    LEFT : KEY_A,
+    DOWN : KEY_S,
+    RIGHT : KEY_D,
     sprite: g_sprites.player1,
 });
 
@@ -72,6 +76,7 @@ function updateSimulation(du)
 function renderSimulation(ctx) {
 
     entityManager.render(ctx);
+    
 
 }
 
