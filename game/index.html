@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Y'all ready for this? You better be, because this is either on the way or already there depending on when you read this and in case this is already there when you read it, there might be more on the way. You never know, unless you are one of the creators in which case you probably do know.</title>
+	<meta charset="UTF-8">
+	<title>Y'all ready for this? You better be, because this is either on the way or already there depending on when you read this and in case this is already there when you read it, there might be more on the way. You never know, unless you are one of the creators in which case you probably do know.</title>
   </head>
   <body>
 
@@ -11,23 +11,37 @@
 	Sorry, but your browser does not support the HTML5 canvas tag. Which means you are either not enough of a nerd for us or you "too much nerd", stop trying to be something you are not, stop using some non-mainstream stuff you hipster. Too solve this go to browsehappy and choose a browser that suits your style. 
 	</canvas>
 
-    <div id="output"></div>
+	<div id="output"></div>
 
-    <script src="js/Constants/constants.js"></script>
-    <script src="js/Services/utilsService.js"></script>
-    <script src="js/Services/imagesPreloadService.js"></script>
-    <script src="js/Services/spriteService.js"></script>
-    <script src="js/Input/g_keys.js"></script>    
-    <script src="js/Entities/Player.js"></script>
-    <script src="js/Managers/particleManager.js"></script>
-    <script src="js/Managers/entityManager.js"></script>
-    <script src="js/MapAndOverGame/MapNode.js"></script>
-    <script src="js/MapAndOverGame/map.js"></script>
-    <script src="js/Input/g_mouse.js"></script>
-    <script src="js/GameLoop/g_main.js"></script>
-    <script src="js/GameLoop/update.js"></script>
-    <script src="js/GameLoop/render.js"></script>
-    <script src="js/game.js"></script>
+	<script>
+		//Disable right click menus on the site
+		(function () {
+  	var blockContextMenu, myElement;
+
+  	blockContextMenu = function (evt) {
+    	evt.preventDefault();
+  	};
+
+  	myElement = document.querySelector('#myCanvas');
+  	myElement.addEventListener('contextmenu', blockContextMenu);
+		})();
+	</script>
+
+	<script src="js/Constants/constants.js"></script>
+	<script src="js/Services/utilsService.js"></script>
+	<script src="js/Services/imagesPreloadService.js"></script>
+	<script src="js/Services/spriteService.js"></script>
+	<script src="js/Input/g_keys.js"></script>    
+	<script src="js/Entities/Player.js"></script>
+	<script src="js/Managers/particleManager.js"></script>
+	<script src="js/Managers/entityManager.js"></script>
+	<script src="js/MapAndOverGame/MapNode.js"></script>
+	<script src="js/MapAndOverGame/map.js"></script>
+	<script src="js/Input/g_mouse.js"></script>
+	<script src="js/GameLoop/g_main.js"></script>
+	<script src="js/GameLoop/update.js"></script>
+	<script src="js/GameLoop/render.js"></script>
+	<script src="js/game.js"></script>
 
 
   </body>

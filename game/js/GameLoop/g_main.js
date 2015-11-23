@@ -54,10 +54,10 @@ g_main._updateClocks = function (frameTime) {
 g_main._iterCore = function (dt) {
     
     // Handle QUIT
-    if (requestedQuit()) {
+    /*if (requestedQuit()) {
         this.gameOver();
         return;
-    }
+    }*/
     
     gatherInputs();
     update(dt);
